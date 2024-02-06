@@ -1,6 +1,19 @@
-# Indicates which folders and files Git should ignore
-# dist/
+# Ignore node_modules directory
+node_modules/
+
+# Ignore files generated during development or runtime
+*.log
+*.json
+*.lock
+*.swp
+
+# Ignore environment-specific files
+.env
+
+# Ignore generated files
+/dist
+/build
+
+# Ignore OS-specific files
 .DS_Store
-DS_Store
-# .node_modules
-# node_modules
+Thumbs.db
