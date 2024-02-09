@@ -12,11 +12,9 @@ Accessibility: Accessible via the command line, making it easy to integrate into
 
 ## Table of Contents:
 - [Overview](#Overview)
-- [The Challenge](#The-Challenge)
 - [Usage Information](#Usage-Information)
 - [Installation Process](#Installation-Process)
 - [Built With](#Built-With)
-- [What I Learned](#What-I-Learned)
 - [Continued Development](#Continued-Development)
 - [License](#License)
 - [Author](#Author)
@@ -94,3 +92,6 @@ This project is licensed under the [MIT License](LICENSE).
 - W3 schools
 - Chat GPT
 - Youtube
+
+## Author
+Kristie Fisher
