@@ -1,17 +1,14 @@
-import { fileURLToPath } from 'url';
-import path from 'path';
-import fs from 'fs';
-import inquirer from 'inquirer';
-import shapes from './lib/shapes.js';
+const path = require('path');
+const fs = require('fs');
+const inquirer = require('inquirer');
+const shapes = require('./lib/shapes.js');
 
 const { Circle, Square, Triangle } = shapes;
 
+// Get the directory of the current module file
+const currentModuleDir = __dirname;
 
-// Define __dirname and __filename
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-import { createCanvas } from 'canvas'; 
+const { createCanvas } = require('canvas');
 
 class Svg {
     constructor() {
@@ -21,18 +18,18 @@ class Svg {
         this.textHeight = 0;
     }
 
-  render() {
-    const canvasWidth = Math.max(300, this.textWidth + 50); // Adjusted width based on text width
-    const canvasHeight = Math.max(200, this.textHeight + 50); // Adjusted height based on text height
-    
-    const shapeX = canvasWidth / 2 - this.textWidth / 2; 
-    const shapeY = canvasHeight / 2 - this.textHeight / 2; 
+    render() {
+        const canvasWidth = Math.max(300, this.textWidth + 50); // Adjusted width based on text width
+        const canvasHeight = Math.max(200, this.textHeight + 50); // Adjusted height based on text height
+        
+        const shapeX = canvasWidth / 2 - this.textWidth / 2; 
+        const shapeY = canvasHeight / 2 - this.textHeight / 2; 
 
-    return `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="${canvasWidth}" height="${canvasHeight}">
-        ${this.shapeElement}
-        ${this.textElement}
-    </svg>`;
-}
+        return `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="${canvasWidth}" height="${canvasHeight}">
+            ${this.shapeElement}
+            ${this.textElement}
+        </svg>`;
+    }
 
     setTextElement(text, color) {
         const canvas = createCanvas(200, 200); 
@@ -107,7 +104,8 @@ async function main() {
     // Render SVG content
     const svgContent = svg.render();
 
-    const examplesDir = path.join(__dirname, 'examples');
+    // Get the directory for examples
+    const examplesDir = path.join(currentModuleDir, 'examples');
     if (!fs.existsSync(examplesDir)) {
         fs.mkdirSync(examplesDir);
     }
@@ -121,6 +119,7 @@ async function main() {
 
 // Run the CLI
 main();
+
 
 
 
