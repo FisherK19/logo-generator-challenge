@@ -1,15 +1,15 @@
+// Importing necessary modules
 const path = require('path');
 const fs = require('fs');
 const inquirer = require('inquirer');
 const shapes = require('./lib/shapes.js');
-
+// Constants and classes definition
 const { Circle, Square, Triangle } = shapes;
 
-// Get the directory of the current module file
 const currentModuleDir = __dirname;
 
 const { createCanvas } = require('canvas');
-
+// SVG class for rendering logos
 class Svg {
     constructor() {
         this.textElement = '';
@@ -17,14 +17,14 @@ class Svg {
         this.textWidth = 0;
         this.textHeight = 0;
     }
-
+// Method to render SVG content
     render() {
-        const canvasWidth = Math.max(300, this.textWidth + 50); // Adjusted width based on text width
-        const canvasHeight = Math.max(200, this.textHeight + 50); // Adjusted height based on text height
-        
+        const canvasWidth = Math.max(300, this.textWidth + 50);
+        const canvasHeight = Math.max(200, this.textHeight + 50); 
+        // Calculating position for text and shape elements
         const shapeX = canvasWidth / 2 - this.textWidth / 2; 
         const shapeY = canvasHeight / 2 - this.textHeight / 2; 
-
+ // Generating SVG content
         return `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="${canvasWidth}" height="${canvasHeight}">
             ${this.shapeElement}
             ${this.textElement}
