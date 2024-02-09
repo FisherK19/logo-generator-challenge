@@ -29,7 +29,6 @@ Accessibility: Accessible via the command line, making it easy to integrate into
 - Flexibility: Generate logos with up to three characters for text, allowing for quick iterations and experimentation.
 - Export Options: Save generated logos as SVG files for easy integration into your projects.
 
-## The Challenge:
 
 ## User Story
 AS a freelance web developer
@@ -56,16 +55,29 @@ THEN I am shown a 300x200 pixel image that matches the criteria I entered
 ## Usage Instructions
 - Run the project with `node index.js`.
 - Follow the on-screen instructions to generate logos.
-- Once completed a SVG file named "logo.svg" will be created.
-- you may also rename the "logo.svg" file to the file name of your choice.
+- Once completed a example file named "logo_circle", "logo_square" or "logo_triangle" will be created.
+- you may also rename the "logo." file to the file name of your choice.
+
+## Walk-through Video Link:
+
+
 
 ## Screenshots:
 
 ### Figure 1. Command line application
 
+![Example CLI](images/command.line.app.png)
+
+
 ### Figure 2. Jest Testing "npm test"
 
+![Example Test](images/shapes.test.png)
+
+
 ### Figure 3. Generated "logo.svg" file
+
+![Example Logo](images/logo.jpg)
+
 
 ## License
 
