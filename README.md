@@ -60,6 +60,7 @@ THEN I am shown a 300x200 pixel image that matches the criteria I entered
 
 ## Walk-through Video Link:
 
+https://drive.google.com/file/d/1aNrmOfYGKHb-4V-bto6V6CDDtOmjreEz/view
 
 
 ## Screenshots:
